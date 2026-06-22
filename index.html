@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productivity dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/c3/73/c9/c373c906337d2b0028bb06ee80728ec0.jpg"
+        type="image/x-icon">
+
+    <!-- cdn for remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <main>
+        <div class="follower"></div>
+
+        <nav>
+            <h1>productivity dashboard</h1>
+
+            <div class="themeChange">
+                <button id="changeThemeBtn">change theme</button>
+                <div class="dropDown">
+                    <h3 id="dark">dark</h3>
+                    <h3 id="light">light</h3>
+                </div>
+            </div>
+        </nav>
+
+        <section class="info">
+
+            <div class="left">
+                <h2 class="inner-left" id="date">...</h2>
+                <h1 class="inner-left" id="day-time">...</h1>
+                <h2 class="inner-left" id="city">...</h2>
+            </div>
+
+            <div class="right">
+                <h1 class="degree weather-info">...</h1>
+                <h2 class="type weather-info">...</h2>
+
+                <div class="basic">
+                    <h3 class="inner-basics weather-info" id="precipitation">pressure : ...</h3>
+                    <h3 class="inner-basics weather-info" id="humidity">humidity : ...</h3>
+                    <h3 class="inner-basics weather-info" id="wind">wind : ...</h3>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="all-elems">
+            <div class="elem" id="todo" data-id="0">todo list</div>
+            <div class="elem" id="daily-planner" data-id="1">daily planner</div>
+            <div class="elem" id="motivation" data-id="2">motivation</div>
+            <div class="elem" id="timer" data-id="3">pomodoro timer</div>
+            <div class="elem" id="daily-goals" data-id="4">daily goals</div>
+        </div>
+
+        <section class="screen todo" id="0">
+            <i class="ri-close-large-line cross" id="0"></i>
+
+            <div class="inner todo">
+                <h1>your personalised task list</h1>
+
+                <div class="todo-content">
+                    <div class="inner-todo-left">
+                        <div class="title-parent data-parent">
+                            <label for="title">title</label>
+                            <input type="text" name="" id="title" placeholder="enter title">
+                        </div>
+
+                        <div class="details-parent data-parent">
+                            <label for="details">enter details</label>
+                            <textarea name="" id="details" placeholder="enter task details"></textarea>
+                        </div>
+
+                        <div class="checkbox">
+                            <input type="checkbox" name="" id="imp">
+                            <label for="imp">mark as important</label>
+                        </div>
+
+                        <button id="add-task-btn">add task</button>
+                    </div>
+
+                    <div class="inner-todo-right">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="screen daily-planner" id="1">
+            <i class="ri-close-large-line cross" id="1"></i>
+            <h1>plan your day to be more productive</h1>
+
+            <div class="inner-planner">
+            </div>
+        </section>
+
+        <section class="screen motivation" id="2">
+            <i class="ri-close-large-line cross" id="2"></i>
+
+            <div class="inner-motivation">
+                <h1></h1>
+                <h3></h3>
+                <button>another quote</button>
+            </div>
+        </section>
+
+        <section class="screen timer" id="3">
+            <i class="ri-close-large-line cross" id="3"></i>
+
+            <h1>study with me!</h1>
+            <h4>work time</h4>
+
+            <div class="inner-timer">
+                <h1 id="crr_time">25:00</h1>
+
+                <div class="inner-timer-btn-box">
+                    <button id="start">start</button>
+                    <button id="pause">pause</button>
+                    <button id="reset">reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="screen daily-goals" id="4">
+            <i class="ri-close-large-line cross" id="4"></i>
+
+            daily-goals
+        </section>
+    </main>
+
+    <!-- all scripts -->
+
+    <script type="module" src="script.js"></script>
+
+    <script type="module" src="todo.js"></script>
+    <script type="module" src="daily-planner.js"></script>
+    <script type="module" src="motivation.js"></script>
+    <script type="module" src="timer.js"></script>
+    <script type="module" src="daily-goals.js"></script>
+</body>
+
+</html>
