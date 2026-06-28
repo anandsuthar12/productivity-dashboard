@@ -1,5 +1,5 @@
 // global declarations
-let values = JSON.parse(localStorage.getItem('input-value'));
+let values = JSON.parse(localStorage.getItem("input-value")) || [];
 
 // selections
 
@@ -29,11 +29,8 @@ let all_input = document.querySelectorAll(".ech-planner>input");
 all_input = Array.from(all_input);
 
 function getvalue() {
-  values = all_input.map((ech, id) => {
-    return ech.value;
-  });
-
-  localStorage.setItem('input-value',JSON.stringify(values));
+  values = all_input.map((ech) => ech.value);
+  localStorage.setItem("input-value", JSON.stringify(values));
 }
 
 getvalue();
@@ -41,6 +38,6 @@ getvalue();
 
 planner_box.addEventListener("input", (e) => {
   if (e.target.tagName == "INPUT") {
-    getvalue()
+    getvalue();
   }
 });
